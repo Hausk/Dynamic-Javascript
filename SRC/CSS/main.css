@@ -3,6 +3,14 @@
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    cursor: default;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 .background {
     overflow: hidden;
@@ -21,24 +29,28 @@
 
 .icons {
     font-size: 4rem;
-    color: #ff0000;
+    color: #EB4D4D;
 }
 .new-game-button h3, .action-button p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: auto 0 auto 1.5rem;
+    font-weight: 300;
 }
 
 .player-turn h2 {
     font-size: 5rem;
     letter-spacing: 0.2rem;
+    font-weight: 200;
 }
 
 .new-game-button {
     display: flex;
     margin: 2rem auto;
-}
-.new-game-button h3 {
-    margin: auto;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
 .player-1, .player-2 {
@@ -62,11 +74,12 @@
 
 .round-points p {
     font-size: 8rem;
-    color: #ff0000;
+    color: #EB4D4D;
+    font-weight: 200;
 }
 
 .player-global-point {
-    background-color: #ff0000;
+    background-color: #EB4D4D;
     padding: 12px;
     text-align: center;
     width: 20%;
@@ -87,9 +100,14 @@
     flex-direction: column;
 }
 
+.roll-dice {
+    margin-top: 100%;
+}
 .roll-dice, .hold {
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .action-button {
@@ -99,4 +117,23 @@
     left: 50%;
     text-transform: uppercase;
     font-weight: 300;
+    padding: 180px 0;
+}
+
+
+.dice {
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dice img {
+    height: 12rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* Hovers & other */
+
+button:hover p, button:hover h3 {
+    font-weight: 600;
 }
