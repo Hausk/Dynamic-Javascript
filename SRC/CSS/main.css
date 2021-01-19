@@ -37,6 +37,17 @@ button {
     font-weight: 300;
 }
 
+.active .player-turn h2 {
+    font-weight: 500;
+}
+
+.active .player-turn h2::after {
+    content: "\2022";
+    position: absolute;
+    color: #EB4D4D;
+    
+}
+
 .player-turn h2 {
     font-size: 5rem;
     letter-spacing: 0.2rem;
@@ -136,4 +147,5 @@ button {
 
 button:hover p, button:hover h3 {
     font-weight: 600;
+    cursor: pointer;
 }
