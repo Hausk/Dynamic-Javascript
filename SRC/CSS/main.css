@@ -20,6 +20,7 @@ button {
     background-image: linear-gradient(to top, #764f48, #815a51, #8b665a, #967164, #a17d6e);
 }
 .container {
+    overflow: hidden;
     margin: auto;
     width: 97%;
     height: 95%;

@@ -1,10 +1,11 @@
-var scores, roundScores, actualPlayer, playing, lastDice;
+
+scoreEnter = 100;
 init();
-Dice();
+dice();
 
 
 
-function Dice() {
+function dice() {
     document.querySelector('.roll-dice').addEventListener('click', function() {
         
         if(playing) {
@@ -27,7 +28,7 @@ function Dice() {
 
                 document.querySelector('#current-score-' + actualPlayer).textContent = roundScore;
 
-                // On verifie que le dernier roll est égual
+                // On verifie que le dernier roll est égal
             } else {
                 nextPlayer();
             }
@@ -47,7 +48,7 @@ document.querySelector('.hold').addEventListener('click', function() {
         console.log('Joueur ' + actualPlayer + scores[actualPlayer]);
 
         // Init des 100 point pour win
-        var winningScore = 10;
+        var winningScore = scoreEnter;
 
     // On regarde si le joueur a gg
     if (scores[actualPlayer] >= winningScore) {
@@ -69,7 +70,7 @@ document.querySelector('.hold').addEventListener('click', function() {
 
 function nextPlayer() {
     // Changement de joueur
-    // Si le joueur est égak à 0, passe a joueur suivant, sinon reste à 0.
+    // Si le joueur est égal à 0, passe a joueur suivant, sinon reste à 0.
     actualPlayer == 1 ? actualPlayer = 2 : actualPlayer = 1;
     // reset
     roundScore = 0;
@@ -96,8 +97,8 @@ function init() {
     document.getElementById('current-score-2').textContent = '0';
 
     // Changement du nom des joueurs (pour peut etre plus tard).
-    document.getElementById('player-1-name').textContent = 'Player 1';
-    document.getElementById('player-2-name').textContent = 'Player 2';
+    document.getElementById('player-1-name').textContent = 'Joueur 1';
+    document.getElementById('player-2-name').textContent = 'Joueur 2';
 
     // Supprime la classe Winner*
     document.querySelector('.player-1').classList.remove('winner');
